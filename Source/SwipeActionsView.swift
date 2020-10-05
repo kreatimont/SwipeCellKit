@@ -289,9 +289,9 @@ class SwipeActionButtonWrapperView: UIView {
     init(frame: CGRect, action: SwipeAction, orientation: SwipeActionsOrientation, contentWidth: CGFloat) {
         switch orientation {
         case .left:
-            contentRect = CGRect(x: frame.width - contentWidth, y: 0, width: contentWidth, height: frame.height)
+            contentRect = CGRect(x: frame.width - contentWidth, y: 0.5, width: contentWidth, height: frame.height - 1)
         case .right:
-            contentRect = CGRect(x: 0, y: 0, width: contentWidth, height: frame.height)
+            contentRect = CGRect(x: 0, y: 0.5, width: contentWidth, height: frame.height - 1)
         }
         
         super.init(frame: frame)
