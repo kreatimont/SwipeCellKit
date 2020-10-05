@@ -59,6 +59,11 @@ class SwipeActionButton: UIButton {
         setTitleColor(highlightedTextColor, for: .highlighted)
         setImage(action.image, for: .normal)
         setImage(action.highlightedImage ?? action.image, for: .highlighted)
+        
+        if let bgImg = action.backgroundImage {
+            setBackgroundImage(bgImg, for: .normal)
+        }
+        
     }
     
     override var isHighlighted: Bool {
